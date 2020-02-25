@@ -1,1 +1,10 @@
-<h1>NEW</h1>
+<%= simple_form_for (@project) do |f| %>
+  <!-- [...] -->
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :url %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Create a Project", class: "btn btn-primary" %>
+  <!-- [...] -->
+<% end %>
+

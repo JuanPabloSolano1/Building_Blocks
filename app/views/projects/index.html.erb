@@ -1,19 +1,90 @@
 <div id="container">
-  <div id="banner">
-    <h1 class="element"></h1>
-    <%= image_tag "Blocks.jpg", id: "banner_image"%>
-  </div>
-  <div>
-  <p>Icons</p>
+   <div id="banner">
+      <h1 class="element"></h1>
+      <%= image_tag "Blocks.jpg", id: "banner_image"%>
+   </div>
+   <div>
+      <h2 class="index_header">Tech Stack</h2>
+      <div class="container text-center">
+         <div class="wrap">
+            <div class="tile">
+               <%=image_tag "react.jpg",width: 200%>
+               <div class="text">
+               </div>
+            </div>
+         </div>
+         <div class="wrap">
+            <div class="tile">
+               <%=image_tag "Javascript_logo.png",width: 200%>
+               <div class="text">
+               </div>
+            </div>
+         </div>
+         <div class="wrap">
+            <div class="tile">
+               <%= image_tag '4223.png' %>
+               <div class="text">
+               </div>
+            </div>
+         </div>
+         <div class="wrap">
+            <div class="tile">
+               <%=image_tag "Ruby_programming.png",width: 200%>
+               <div class="text">
+               </div>
+            </div>
+         </div>
+         <div class="wrap">
+            <div class="tile">
+               <%=image_tag "html.png",width: 200%>
+               <div class="text">
+               </div>
+            </div>
+         </div>
+         <div class="wrap">
+            <div class="tile">
+               <%= image_tag 'css.jpg' %>
+               <div class="text">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div>
+   </div>
+  <h2 class="index_header">Projects</h2>
+  <div id="project_cards">
+  <% @projects.each do |project| %>
+    <div class="wrapper">
+      <div class="product-img">
+        <% if project.photo.attached? %>
+        <%= image_tag project.photo , height: 420, width: 327, crop: :cover %>
+        <%end%>
+      </div>
+      <div class="product-info">
+        <div class="product-text">
+          <h1><%=project.name%></h1></h1>
+          <h2>by studio and friends</h2>
+          <p><%=project.description%></p>
+        </div>
+        <div class="product-price-btn">
+          <a href= "<%=project.url%>"><button type="button">Go to Website</button></a>
+        </div>
+      </div>
+    </div>
+    <%end%>
   </div>
 </div>
 <script>
     var typed = new Typed('.element', {
-    strings: ['First sentence.', 'Second sentence.','This is a JavaScript library', 'This is an ES6 module'],
-    typeSpeed: 30,
+    strings: ['<%=@projects.count.to_s%> Projects Built', 'Second sentence.','This is a JavaScript library', 'This is an ES6 module'],
+    typeSpeed: 40,
     backDelay: 1500,
     startDelay: 1000,
     loop: true,
-    fadeOut: true
+    fadeOut: true,
+    cursorBlinking: false,
+    showCursor: false
   })
+    console.log(typed)
   </script>
