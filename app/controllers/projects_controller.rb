@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: :index
   def index
    @projects = Project.all
   end
@@ -19,13 +20,18 @@ class ProjectsController < ApplicationController
   end
 
   def update
-
-
+   @project = Project.find(params[:id])
+   @project.update(project_params)
+   redirect_to projects_path
   end
 
   def destroy
 
 
+  end
+
+  def edit
+   @project = Project.find(params[:id])
   end
 
   def project_params

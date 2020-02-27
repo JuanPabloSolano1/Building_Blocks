@@ -7,4 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+   user = User.new(
+      :email                 => "juanpablosolanosuarez@hotmail.com",
+      :password              => "123456",
+      :password_confirmation => "123456"
+  )
+  user.save!

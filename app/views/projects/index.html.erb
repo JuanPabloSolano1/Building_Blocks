@@ -23,26 +23,30 @@
 
               <!-- Header -->
                 <header id="header">
-                  <a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
                   <ul class="icons">
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                    <li><a href="https://github.com/JuanPabloSolano1" class="icon brands fa-github"></i><span class="label">Github</span></a>
+                    <li><a href="" class="icon brands fa-google-drive"><span class="label">Resume</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/jusolano/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    <li><a href="https://www.instagram.com/jsolanoss/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://www.facebook.com/juanpablo.solano.9619" class="icon brands fa-facebook-square"><span class="label">Medium</span></a></li>
                   </ul>
                 </header>
+
 
               <!-- Banner -->
                 <section id="banner">
                   <div class="content">
                     <header>
-                      <h1 class="main_header">Building Blocks</h1>
-                      <p>A free and fully responsive site template</p>
+                      <h1 class="main_header">Juan Pablo Solano</h1>
+                      <p>Passionate for Coding - Full Stack Developer</p>
                     </header>
-                    <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+                    <p id ="first_paragraph">After living for more than five years in Silicon Valley California. I developed a great attraction to the technology that moves the world. After working in Google for more than two years as a data specialist I was more and more interested in how products are built.
+                    <br>
+                    <br>
+                    I decided to move entirely to web development and after completing a Bootcamp with Le Wagon. I gained a solid tech stack. Here you can find a bit of the different projects I've contributed and worked entirely for.
+                    </p>
                     <ul class="actions">
-                      <li><a href="#" class="button big">Learn More</a></li>
+                      <li><a href="https://www.linkedin.com/in/jusolano/" class="button big">Learn More</a></li>
                     </ul>
                   </div>
                   <span class="image object">
@@ -57,7 +61,7 @@
                   </header>
                   <div class="features">
                     <article>
-                      <%=image_tag "Javascript_logo.png",width: 200, class: "icon fa-gem"%>
+                      <%=image_tag "Javascript_logo.png", class: "icon fa-gem"%>
                       <div class="content">
                         <h3 class="tech_language">Javascript</h3>
 
@@ -71,7 +75,7 @@
                       </div>
                     </article>
                     <article>
-                      <%=image_tag "Ruby_programming.png",width: 200, class: "icon fa-gem" %>
+                      <%=image_tag "Ruby_programming.png", class: "icon fa-gem" %>
                       <div class="content">
                         <h3 class="tech_language">Ruby</h3>
 
@@ -124,7 +128,7 @@
                     <% @projects.each do |project| %>
                     <article>
                        <% if project.photo.attached? %>
-                       <%=image_tag project.photo ,width: 450, height: 400, crop: :cover, class: "icon fa-gem"%>
+                       <%=image_tag project.photo ,width: 380, height: 260, crop: :cover, class: "icon fa-gem"%>
                        <%end%>
                       <h3 class="project_name"><%=project.name%></h3>
                       <p><%=project.description%></p>
@@ -135,6 +139,7 @@
                     <%end%>
                   </div>
                 </section>
+                <h3 class="element"></h3>
             </div>
           </div>
 
@@ -155,70 +160,44 @@
                     <h2>Menu</h2>
                   </header>
                   <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="generic.html">Generic</a></li>
-                    <li><a href="elements.html">Elements</a></li>
+                    <li><%= link_to "Resume", asset_path("JP.pdf"), target: "_blank" %></li>
+                    <li><a href="https://www.linkedin.com/in/jusolano/">Linkedin</a></li>
+                    <li><a href="https://github.com/JuanPabloSolano1">Github</a></li>
                     <li>
-                      <span class="opener">Submenu</span>
-                      <ul>
-                        <li><a href="#">Lorem Dolor</a></li>
-                        <li><a href="#">Ipsum Adipiscing</a></li>
-                        <li><a href="#">Tempus Magna</a></li>
-                        <li><a href="#">Feugiat Veroeros</a></li>
-                      </ul>
                     </li>
-                    <li><a href="#">Etiam Dolore</a></li>
-                    <li><a href="#">Adipiscing</a></li>
-                    <li>
-                      <span class="opener">Another Submenu</span>
-                      <ul>
-                        <li><a href="#">Lorem Dolor</a></li>
-                        <li><a href="#">Ipsum Adipiscing</a></li>
-                        <li><a href="#">Tempus Magna</a></li>
-                        <li><a href="#">Feugiat Veroeros</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Maximus Erat</a></li>
-                    <li><a href="#">Sapien Mauris</a></li>
-                    <li><a href="#">Amet Lacinia</a></li>
                   </ul>
+                  <br>
+                  <br>
+                  <header class="major">
+                    <h2>Skills</h2>
+                  </header>
+                  <ul>
+                    <li><a href="">Web Development</a></li>
+                    <li><a href="generic.html">Data Analytics</a></li>
+                    <li>
+                    </li>
+                  </ul>
+                  <br>
+                  <br>
+                  <header class="major">
+                    <h2>Achievements</h2>
+                  </header>
+                  <ul>
+                    <li><a href="https://www.hackerrank.com/juanpablosolano2">Hackerrank</a></li>
+                    <li><a href="https://www.codewars.com/users/Juanpablosolanosuarez">Code Wars</a></li>
+                    <li>2nd out of 19 students (Le Wagon Amsterdam)</li>
+                  </ul>
+
                 </nav>
 
-              <!-- Section -->
-                <section>
-                  <header class="major">
-                    <h2>Ante interdum</h2>
-                  </header>
-                  <div class="mini-posts">
-                    <article>
-                      <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-                      <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                    </article>
-                    <article>
-                      <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-                      <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                    </article>
-                    <article>
-                      <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                      <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                    </article>
-                  </div>
-                  <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                  </ul>
-                </section>
-
-              <!-- Section -->
                 <section>
                   <header class="major">
                     <h2>Get in touch</h2>
                   </header>
-                  <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                   <ul class="contact">
-                    <li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-                    <li class="icon solid fa-phone">(000) 000-0000</li>
-                    <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-                    Nashville, TN 00000-0000</li>
+                    <li class="icon solid fa-envelope"><a href="#">juansolano1034@gmail.com</a></li>
+                    <li class="icon solid fa-phone">(+31) 0614-777-17</li>
+                    <li class="icon solid fa-home">Amsterdam NE<br /></li>
                   </ul>
                 </section>
 
@@ -242,12 +221,11 @@
   </body>
   <script>
     var typed = new Typed('.element', {
-    strings: ['<%=@projects.count.to_s%> Projects Built', 'Second sentence.','This is a JavaScript library', 'This is an ES6 module'],
+    strings: ['Updates: A total of <%=@projects.count.to_s%> Projects Built', '','Updates: 8 programming languages or frameworks used', 'Updates: Two different projects under construction'],
     typeSpeed: 40,
     backDelay: 1500,
     startDelay: 1000,
     loop: true,
-    fadeOut: true,
     cursorBlinking: false,
     showCursor: false
   })
