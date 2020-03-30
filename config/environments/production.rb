@@ -3,6 +3,16 @@ Rails.application.configure do
    config.action_mailer.delivery_method = :smtp
   # config.action_mailer.default_url_options = { host: "app.zukunftschreiben.org" }
   config.action_mailer.default_url_options = { host: "https://juanpablosolanobb.herokuapp.com/" }
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.sendgrid.net',
+    port:                 587,
+    domain:               'juanpablosolanosuarez@hotmail.com',
+    user_name:            'apikey',
+    password:             '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',
+    authentication:       'plain',
+    enable_starttls_auto: true
+}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
