@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :send_mail
   include Pundit
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
 
@@ -11,3 +11,5 @@ class ApplicationController < ActionController::Base
   end
 
 end
+
+
