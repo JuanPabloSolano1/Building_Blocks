@@ -2041,6 +2041,19 @@ button,
       padding-right: 60px;
      }
 
+     input[type="text"] {
+    width: 300px;
+    margin-bottom: 20px;
+      }
+
+      input[type="email"] {
+          width: 300px;
+      }
+
+      input[type="password"] {
+          width: 300px;
+      }
+
      #first_paragraph {
       word-spacing: 0px !important;
       width: 300px !important;
@@ -2711,13 +2724,20 @@ input{
     height: 30px;
 }
 
-input[type="text"] {
+input#name {
     width: 300px;
     margin-bottom: 20px;
 }
+input#email{
+  width: 300px;
+}
 
-input[type="email"] {
-    width: 300px;
+.contact_input {
+    width: 100%;
+}
+
+input[type="password"] {
+    width: 100%;
 }
 
 textarea {
