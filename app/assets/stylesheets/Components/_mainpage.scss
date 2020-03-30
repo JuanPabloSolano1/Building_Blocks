@@ -25,6 +25,21 @@
   margin-top: 20px;
 }
 
+#banner .image img {
+    height: 90%;
+
+}
+
+#banner_text{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 30px 30px;
+  width: 700px;
+}
+
+#learn_more{
+  margin-top: 40px;
+}
+
 body
 {
   background-color:#eee
@@ -1318,7 +1333,7 @@ header.major > :last-child {
   // border-bottom: solid 3px #1f2d53;
   display: inline-block;
   margin: 0 0 2em 0;
-  padding: 0 0.75em 0.5em 0; }
+  padding: 0 0em 0em 0; }
 
 header.main > :last-child {
   margin: 0 0 1em 0; }
@@ -2017,6 +2032,32 @@ button,
             margin: -3em 0 0 -3em;
             width: 6em; } }
   @media screen and (max-width: 480px) {
+     h3.tech_language{
+       text-align: center;
+       margin-top: 30px;
+     }
+
+     #icons{
+      padding-right: 60px;
+     }
+
+     #first_paragraph {
+      word-spacing: 0px !important;
+      width: 300px !important;
+      text-align: initial;
+      font-size:13px;
+     }
+
+     header.major {
+      text-align: center;
+      padding: 0 !important;
+     }
+
+     #banner_text{
+      width: 320px !important;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      padding: 5px 5px;
+     }
     .features article {
       -moz-flex-direction: column;
       -webkit-flex-direction: column;
@@ -2030,7 +2071,8 @@ button,
         height: 6em;
         line-height: 6em;
         margin: 0 0 1.5em 0;
-        width: 6em; }
+        width: 6em;
+        margin: 0 auto; }
         .features article .icon:before {
           font-size: 1.5rem; }
         .features article .icon:after {
@@ -2632,7 +2674,11 @@ a {
 }
 
 #first_paragraph{
-  word-spacing: 2px;
+  word-spacing: 0px;
+  width: 400px;
+  text-align: start;
+  word-break: break-word;
+  margin-top: 40px;
 }
 
 #Update{
@@ -2642,3 +2688,53 @@ a {
 #destroy{
   margin-left: 10px;
 }
+
+h2.header-major {
+    color: #717374;
+}
+
+.form_info{
+  display: inline-grid;
+}
+
+input{
+  background: #ffffff;
+    border-radius: 0.375em;
+    border: none;
+    border: solid 1px rgba(210, 215, 217, 0.75);
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+}
+
+input[type="text"] {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    width: 300px;
+}
+
+textarea {
+  margin-top: 20px;
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+#button_form{
+  margin-top: 30px;
+  width: 300px;
+}
+
+#message{
+  margin-top: 20px;
+}
+
+
+
+

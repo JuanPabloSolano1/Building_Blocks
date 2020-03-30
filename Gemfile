@@ -28,6 +28,7 @@ gem 'simple_form'
 gem 'cloudinary', '~> 1.12.0'
 gem 'pundit'
 gem 'pg'
+gem 'letter_opener', group: :development
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

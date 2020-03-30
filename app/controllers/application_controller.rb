@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include Pundit
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
 
+
   private
 
   def skip_pundit?

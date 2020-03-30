@@ -35,22 +35,24 @@
 
               <!-- Banner -->
                 <section id="banner">
-                  <div class="content">
+                  <div id="banner_text" class="content">
                     <header>
                       <h1 class="main_header">Juan Pablo Solano</h1>
-                      <p>Passionate for Coding - Full Stack Developer</p>
+                      <p><strong>Passionate for Coding - Full Stack Developer</strong></p>
                     </header>
-                    <p id ="first_paragraph">After living for more than five years in Silicon Valley California. I developed a great attraction to the technology that moves the world. After working in Google for more than two years as a data specialist I was more and more interested in how products are built.
+                    <p id ="first_paragraph">After living in Silicon Valley, California for over five years, I developed a great attraction towards the technology that essentially moves the world. I stayed as a data specialist at Google for more than two years but realized that my core interest always been product creation.
                     <br>
                     <br>
                     I decided to move entirely to web development and after completing a Bootcamp with Le Wagon. I gained a solid tech stack. Here you can find a bit of the different projects I've contributed and worked entirely for.
                     </p>
                     <ul class="actions">
-                      <li><a href="https://www.linkedin.com/in/jusolano/" class="button big">Learn More</a></li>
+                      <li><a id="learn_more"href="https://www.linkedin.com/in/jusolano/" class="button big">Learn More</a></li>
                     </ul>
                   </div>
                   <span class="image object">
                     <%= image_tag "BB.jpg"%>
+                    <div>
+                   </div>
                   </span>
                 </section>
 
@@ -128,7 +130,7 @@
                     <% @projects.each do |project| %>
                     <article>
                        <% if project.photo.attached? %>
-                       <%=image_tag project.photo ,width: 380, height: 260, crop: :cover, class: "icon fa-gem"%>
+                       <%=image_tag project.photo ,width: 380, height: 260, crop: :cover,id:"icons", class: "icon fa-gem"%>
                        <%end%>
                       <h3 class="project_name"><%=project.name%></h3>
                       <p><%=project.description%></p>
@@ -223,6 +225,28 @@
                   <p class="copyright">&copy; Juan Pablo Solano. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a></p>
                 </footer>
 
+               <section>
+                  <header class="major">
+                    <h2>Contact Form</h2>
+                  </header>
+                   <form action="/send_mail" method="POST">
+                    <div class="form_info">
+                      <label>Name</label>
+                      <%= text_field_tag 'name', nil, placeholder: 'Your Name', class: "contact_input" %>
+                    </div>
+                    <div class="form_info">
+                      <label>Email</label>
+                       <%= email_field_tag 'email', nil, placeholder: 'Your Email Address', class: "contact_input" %>
+                    </div>
+                    <div class="form_info">
+                      <label id="message">Message</label>
+                      <%= text_area_tag 'body', nil, rows: 4, placeholder: 'Comments...', id: "text_area_input"%>
+                    </div>
+                     <div>
+                        <button id="button_form" class="button big">Submit</button>
+                     </div>
+                   </form>
+                </section>
             </div>
           </div>
 
@@ -246,6 +270,5 @@
     cursorBlinking: false,
     showCursor: false
   })
-    console.log(typed)
   </script>
 </html>
