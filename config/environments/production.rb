@@ -8,7 +8,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'herokuapp.com',
     user_name:            'apikey',
-    password:             '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',
+    password:             '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',
     authentication:       'plain',
     enable_starttls_auto: true
 }
