@@ -2055,10 +2055,13 @@ button,
       }
 
      #first_paragraph {
-      word-spacing: 0px !important;
-      width: 300px !important;
-      text-align: initial;
-      font-size:13px;
+      word-spacing: 3px;
+      width: 400px;
+      text-align: start;
+      word-break: break-word;
+      margin-top: 40px;
+      font-weight: 200;
+      -webkit-font-smoothing: antialiased;
      }
 
      header.major {
@@ -2687,11 +2690,13 @@ a {
 }
 
 #first_paragraph{
-  word-spacing: 0px;
+  word-spacing: 3px;
   width: 400px;
   text-align: start;
   word-break: break-word;
   margin-top: 40px;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
 }
 
 #Update{
